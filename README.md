@@ -7,7 +7,7 @@ Dlayer
 Migration project 
 --------
 
-I aim to migrate Dlayer to Zend Framework 2, this repository is for the migration project.
+I aim to migrate Dlayer to Zend Framework 2, this repository is for the migration project and will become the main project once it has feature parity.
 
 Base project
 --------
