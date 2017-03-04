@@ -1,0 +1,10 @@
+{
+    "name": "dlayer",
+    "description": "Migration of Dlayer from ZF to ZF2",
+    "version": "2.0.0",
+    "dependencies": {
+        "bootstrap": "3.3.*",
+        "jqueryui" : "latest"
+    },
+    "private": true
+}
