@@ -23,12 +23,23 @@ return [
                         'action' => 'index',
                     ],
                 ],
-            ]
+            ],
+            'import' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/install/import[/:action]',
+                    'defaults' => [
+                        'controller' => Controller\ImportController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
+            Controller\ImportController::class => InvokableFactory::class,
         ],
     ],
     'view_manager' => [
