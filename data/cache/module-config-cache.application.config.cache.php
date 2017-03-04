@@ -50,6 +50,19 @@ return array (
           ),
         ),
       ),
+      'install' => 
+      array (
+        'type' => 'Zend\\Router\\Http\\Literal',
+        'options' => 
+        array (
+          'route' => '/install',
+          'defaults' => 
+          array (
+            'controller' => 'Install\\Controller\\IndexController',
+            'action' => 'index',
+          ),
+        ),
+      ),
     ),
   ),
   'controllers' => 
@@ -57,6 +70,7 @@ return array (
     'factories' => 
     array (
       'Application\\Controller\\IndexController' => 'Zend\\ServiceManager\\Factory\\InvokableFactory',
+      'Install\\Controller\\IndexController' => 'Zend\\ServiceManager\\Factory\\InvokableFactory',
     ),
   ),
   'view_manager' => 
@@ -76,6 +90,7 @@ return array (
     'template_path_stack' => 
     array (
       0 => 'C:\\Users\\g3d\\Documents\\GitHub\\dlayer-v2\\module\\Application\\config/../view',
+      1 => 'C:\\Users\\g3d\\Documents\\GitHub\\dlayer-v2\\module\\Install\\config/../view',
     ),
   ),
 );
