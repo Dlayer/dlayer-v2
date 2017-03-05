@@ -1,30 +1,30 @@
-<?= $this->doctype() ?>
+<?php /* @var $this \Zend\View\Renderer\PhpRenderer */ ?>
+
+<?php echo $this->doctype(); ?>
 
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <?= $this->headTitle('ZF Skeleton Application')->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?php echo $this->headTitle('Dlayer: Web Development Simplified')->setSeparator(' - ')->setAutoEscape(false); ?>
 
-        <?= $this->headMeta()
+        <?php echo $this->headMeta()
             ->appendName('viewport', 'width=device-width, initial-scale=1.0')
-            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge');
         ?>
 
-        <!-- Le styles -->
-        <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
-            ->prependStylesheet($this->basePath('css/style.css'))
-            ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
-            ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
+        <?php echo $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/x-icon', 'href' => $this->basePath() . '/images/favicon.ico'])
+            ->headLink(['rel' => 'shortcut icon', 'sizes' => '192x192', 'href' => $this->basePath() . '/images/favicon-192x192.png'])
+            ->prependStylesheet($this->basePath('bower_components/bootstrap/dist/css/bootstrap-theme.css'))
+            ->prependStylesheet($this->basePath('bower_components/bootstrap/dist/css/bootstrap.css'));
         ?>
 
-        <!-- Scripts -->
-        <?= $this->headScript()
-            ->prependFile($this->basePath('js/bootstrap.min.js'))
-            ->prependFile($this->basePath('js/jquery-3.1.0.min.js'))
+        <?php echo $this->headScript()
+            ->prependFile($this->basePath('bower_components/bootstrap/dist/js/bootstrap.js'))
+            ->prependFile($this->basePath('bower_components/jquery/dist/jquery.js'));
         ?>
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-inverse" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -32,24 +32,22 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?= $this->url('home') ?>">
-                        <img src="<?= $this->basePath('img/zf-logo-mark.svg') ?>" height="28" alt="Zend Framework <?= \Application\Module::VERSION ?>"/>&nbsp;Skeleton Application
+                    <a class="navbar-brand" href="<?php echo $this->url('home'); ?>">
+                        <img src="<?php echo $this->basePath('images/brand.jpg'); ?>" width="25" height="25" alt="Dlayer" />
                     </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="<?= $this->url('home') ?>">Home</a></li>
+                        <li class="active"><a href="<?php echo $this->url('home'); ?>">Dlayer</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="container">
-            <?= $this->content ?>
-            <hr>
-            <footer>
-                <p>&copy; 2005 - <?= date('Y') ?> by Zend Technologies Ltd. All rights reserved.</p>
-            </footer>
+            <?php echo $this->content; ?>
         </div>
-        <?= $this->inlineScript() ?>
+        <?php echo $this->inlineScript(); ?>
     </body>
 </html>
+
+
