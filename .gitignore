@@ -11,3 +11,6 @@ composer.lock
 vendor
 composer.phar
 public/bower_components
+
+data/cache/module-classmap-cache.application.module.cache.php
+data/cache/module-config-cache.application.config.cache.php
