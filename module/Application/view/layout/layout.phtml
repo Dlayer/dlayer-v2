@@ -10,19 +10,19 @@
             ->appendHttpEquiv('X-UA-Compatible', 'IE=edge');
         ?>
 
-        <?php echo $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
-            ->prependStylesheet($this->basePath('css/style.css'))
-            ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
-            ->prependStylesheet($this->basePath('css/bootstrap.min.css'));
+        <?php echo $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/x-icon', 'href' => $this->basePath() . '/images/favicon.ico'])
+            ->headLink(['rel' => 'shortcut icon', 'sizes' => '192x192', 'href' => $this->basePath() . '/images/favicon-192x192.png'])
+            ->prependStylesheet($this->basePath('bower_components/bootstrap/dist/css/bootstrap-theme.css'))
+            ->prependStylesheet($this->basePath('bower_components/bootstrap/dist/css/bootstrap.css'));
         ?>
 
         <?php echo $this->headScript()
-            ->prependFile($this->basePath('js/bootstrap.min.js'))
-            ->prependFile($this->basePath('js/jquery-3.1.0.min.js'));
+            ->prependFile($this->basePath('bower_components/bootstrap/dist/js/bootstrap.js'))
+            ->prependFile($this->basePath('bower_components/jquery/dist/jquery.js'));
         ?>
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-inverse" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -30,7 +30,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?= $this->url('home') ?>">
+                    <a class="navbar-brand" href="<?php echo $this->url('home'); ?>">
                         <img src="<?php echo $this->basePath('images/brand.jpg'); ?>" width="25" height="25" alt="Dlayer" />
                     </a>
                 </div>
